@@ -168,6 +168,10 @@ static inline CGPoint CGPointMultiplyScalar(const CGPoint a, const CGFloat b) {
     [_delegate gameSceneDidEndGame:self];
 }
 
+- (BOOL)hasActiveGame {
+    return (_gameRunning && !_gameOver);
+}
+
 #pragma mark - Pipes
 
 - (void)generatePipes {

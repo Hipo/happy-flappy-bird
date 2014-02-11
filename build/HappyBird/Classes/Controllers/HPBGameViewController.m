@@ -24,6 +24,9 @@
 - (void)didTapHappyButton:(id)sender;
 - (void)didTapPauseButton:(id)sender;
 
+- (void)didReceiveApplicationWillResignActiveNotification:(NSNotification *)notification;
+- (void)didReceiveApplicationDidBecomeActiveNotification:(NSNotification *)notification;
+
 @end
 
 
@@ -33,10 +36,24 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 
     if (self) {
+        NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
         
+        [notificationCenter addObserver:self
+                               selector:@selector(didReceiveApplicationWillResignActiveNotification:)
+                                   name:UIApplicationWillResignActiveNotification
+                                 object:[UIApplication sharedApplication]];
+        
+        [notificationCenter addObserver:self
+                               selector:@selector(didReceiveApplicationDidBecomeActiveNotification:)
+                                   name:UIApplicationDidBecomeActiveNotification
+                                 object:[UIApplication sharedApplication]];
     }
     
     return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - View lifecycle
@@ -155,6 +172,16 @@
                          [_flappyButton setAlpha:1.0];
                          [_pauseButton setAlpha:0.0];
                      } completion:nil];
+}
+
+#pragma mark - Notifications
+
+- (void)didReceiveApplicationWillResignActiveNotification:(NSNotification *)notification {
+    [_gameView setPaused:YES];
+}
+
+- (void)didReceiveApplicationDidBecomeActiveNotification:(NSNotification *)notification {
+    [_gameView setPaused:NO];
 }
 
 @end

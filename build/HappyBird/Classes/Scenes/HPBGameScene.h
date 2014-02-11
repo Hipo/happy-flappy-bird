@@ -21,6 +21,8 @@ typedef NS_ENUM(NSInteger, HPBGameSceneMode) {
 
 @property (nonatomic, weak) id <HPBGameSceneDelegate> delegate;
 
+- (BOOL)hasActiveGame;
+
 - (void)startGameWithMode:(HPBGameSceneMode)mode;
 - (void)endGame;
 
