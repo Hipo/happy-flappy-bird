@@ -30,6 +30,9 @@
 		EC7591F918A97A46009459C3 /* pipe-bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7591F518A97A46009459C3 /* pipe-bottom@2x.png */; };
 		EC7591FA18A97A46009459C3 /* pipe-top.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7591F618A97A46009459C3 /* pipe-top.png */; };
 		EC7591FB18A97A46009459C3 /* pipe-top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7591F718A97A46009459C3 /* pipe-top@2x.png */; };
+		EC7591FE18A9A5A0009459C3 /* bird-dead.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7591FC18A9A5A0009459C3 /* bird-dead.png */; };
+		EC7591FF18A9A5A0009459C3 /* bird-dead@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7591FD18A9A5A0009459C3 /* bird-dead@2x.png */; };
+		EC75920418A9AE9B009459C3 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EC75920318A9AE9B009459C3 /* UIView+AutoLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,10 @@
 		EC7591F518A97A46009459C3 /* pipe-bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipe-bottom@2x.png"; sourceTree = "<group>"; };
 		EC7591F618A97A46009459C3 /* pipe-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipe-top.png"; sourceTree = "<group>"; };
 		EC7591F718A97A46009459C3 /* pipe-top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pipe-top@2x.png"; sourceTree = "<group>"; };
+		EC7591FC18A9A5A0009459C3 /* bird-dead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bird-dead.png"; sourceTree = "<group>"; };
+		EC7591FD18A9A5A0009459C3 /* bird-dead@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bird-dead@2x.png"; sourceTree = "<group>"; };
+		EC75920218A9AE9B009459C3 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		EC75920318A9AE9B009459C3 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +90,7 @@
 		EC16014C18A827B6008FEC65 = {
 			isa = PBXGroup;
 			children = (
+				EC75920018A9AE9B009459C3 /* Dependencies */,
 				EC16019418A82B2B008FEC65 /* Classes */,
 				EC16019A18A82B2B008FEC65 /* Resources */,
 				EC1601A018A82B2B008FEC65 /* Support */,
@@ -161,6 +169,8 @@
 		EC16019B18A82B2B008FEC65 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				EC7591FC18A9A5A0009459C3 /* bird-dead.png */,
+				EC7591FD18A9A5A0009459C3 /* bird-dead@2x.png */,
 				EC7591F418A97A46009459C3 /* pipe-bottom.png */,
 				EC7591F518A97A46009459C3 /* pipe-bottom@2x.png */,
 				EC7591F618A97A46009459C3 /* pipe-top.png */,
@@ -202,6 +212,23 @@
 				EC1601C418A84967008FEC65 /* PressStart2P.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EC75920018A9AE9B009459C3 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				EC75920118A9AE9B009459C3 /* UIView+AutoLayout */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		EC75920118A9AE9B009459C3 /* UIView+AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				EC75920218A9AE9B009459C3 /* UIView+AutoLayout.h */,
+				EC75920318A9AE9B009459C3 /* UIView+AutoLayout.m */,
+			);
+			path = "UIView+AutoLayout";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7591FF18A9A5A0009459C3 /* bird-dead@2x.png in Resources */,
 				EC7591FB18A97A46009459C3 /* pipe-top@2x.png in Resources */,
 				EC7591F918A97A46009459C3 /* pipe-bottom@2x.png in Resources */,
 				EC1601A518A82B2B008FEC65 /* Images.xcassets in Resources */,
@@ -269,6 +297,7 @@
 				EC1601B918A830EB008FEC65 /* bird-1.png in Resources */,
 				EC7591FA18A97A46009459C3 /* pipe-top.png in Resources */,
 				EC1601BB18A830EB008FEC65 /* bird-2.png in Resources */,
+				EC7591FE18A9A5A0009459C3 /* bird-dead.png in Resources */,
 				EC1601B818A830EB008FEC65 /* bg-tile@2x.png in Resources */,
 				EC7591F818A97A46009459C3 /* pipe-bottom.png in Resources */,
 				EC1601BD18A830EB008FEC65 /* bird-3.png in Resources */,
@@ -282,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC75920418A9AE9B009459C3 /* UIView+AutoLayout.m in Sources */,
 				EC1601AB18A82C24008FEC65 /* HPBGameViewController.m in Sources */,
 				EC1601A818A82B2B008FEC65 /* main.m in Sources */,
 				EC1601A418A82B2B008FEC65 /* HPBAppDelegate.m in Sources */,
@@ -338,7 +368,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AB67873B-F56C-46D8-B6D7-3916E0939668";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
