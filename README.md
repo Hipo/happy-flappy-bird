@@ -7,6 +7,6 @@ This is a Flappy Bird clone built using Apple's SpriteKit framework. It's a simp
 
 * Happy mode: Serenity. No pipes, just flying. You never die.
 
-![Happy Flappy Bird](docs/screenshot.png)
+![Happy Flappy Bird](docs/screenshot.png) ![Happy Flappy Bird](docs/screenshot-dead.png)
 
 We will put together more information and a tutorial on how to build this game with step by step instructions soon.
