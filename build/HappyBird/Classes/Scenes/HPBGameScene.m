@@ -220,6 +220,11 @@ static inline CGPoint CGPointMultiplyScalar(const CGPoint a, const CGFloat b) {
 
     CGFloat rotation = fmaxf(fminf(_birdNode.physicsBody.velocity.dy * 0.05, 20.0), -20.0);
     
+    if (_gameOver) {
+        rotation = _birdNode.zRotation / M_PI * 180.0;
+        rotation += (180.0 - rotation) * 0.08;
+    }
+    
     [_birdNode setZRotation:rotation * M_PI / 180.0];
     
     if (_touchingFloor || _gameOver) {
