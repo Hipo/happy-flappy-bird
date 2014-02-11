@@ -265,7 +265,7 @@ static inline CGPoint CGPointMultiplyScalar(const CGPoint a, const CGFloat b) {
                                [node setPosition:CGPointAdd(node.position, CGPointMultiplyScalar(moveAmount, 1.5))];
                                
                                if (node.position.x < -40.0) {
-                                   [node setPosition:CGPointMake(self.size.width + 200.0, node.position.y)];
+                                   [node setPosition:CGPointMake(self.size.width + 240.0, node.position.y)];
                                    
                                    SKSpriteNode *pipeTop = (SKSpriteNode *)[node childNodeWithName:@"pipe-top"];
                                    SKSpriteNode *pipeBottom = (SKSpriteNode *)[node childNodeWithName:@"pipe-bottom"];
