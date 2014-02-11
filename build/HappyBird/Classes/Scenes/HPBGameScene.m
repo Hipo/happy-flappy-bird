@@ -217,10 +217,10 @@ static inline CGPoint CGPointMultiplyScalar(const CGPoint a, const CGFloat b) {
     
     _lastUpdateTime = currentTime;
     _totalTime += _updateTimeDelta;
+
+    CGFloat rotation = fmaxf(fminf(_birdNode.physicsBody.velocity.dy * 0.05, 20.0), -20.0);
     
-//    CGFloat rotation = fminf(fmaxf(_birdNode.physicsBody.velocity.dy * 0.1, 10.0), -10.0);
-//    
-//    [_birdNode setZRotation:rotation * M_PI / 180.0];
+    [_birdNode setZRotation:rotation * M_PI / 180.0];
     
     if (_touchingFloor || _gameOver) {
         return;
